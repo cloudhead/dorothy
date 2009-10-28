@@ -1,0 +1,11 @@
+<% for article in @articles do %>
+  <article>
+    <header>
+    <h1><%= article.title %></h1>
+    <span><%= article.date %></span>
+    </header>
+    <section class="content">
+    <%= article.content %>
+    </section>
+  </article>
+<% end %>
