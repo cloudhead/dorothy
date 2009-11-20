@@ -1,4 +1,4 @@
-<article>
+<article class="post">
   <header>
     <h1><%= title %></h1>
     <span><%= date %></span>
@@ -9,10 +9,10 @@
   </section>
 
   <section class="comments">
-    <% if Site[:disqus] %>
+    <% if @config[:disqus] %>
       <div id="disqus_thread"></div>
-      <script type="text/javascript" src="http://disqus.com/forums/<%= Site[:disqus] %>/embed.js"> </script>
-      <noscript><a href="http://<%= Site[:disqus] %>.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+      <script type="text/javascript" src="http://disqus.com/forums/<%= @config[:disqus] %>/embed.js"> </script>
+      <noscript><a href="http://<%= @config[:disqus] %>.disqus.com/?url=ref">View the discussion thread.</a></noscript>
       <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
     <% end %>
   </section>
