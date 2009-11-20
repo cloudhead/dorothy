@@ -1,3 +1,10 @@
-<% for article in articles %>
-  <%= article %>
-<% end %>
+<section id="articles">
+  <% for article in articles[0...3] %>
+    <%= article %>
+  <% end %>
+</section>
+
+<section id="archives">
+  <%= archives[3..-1] %>
+</section>
+

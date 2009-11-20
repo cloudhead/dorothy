@@ -1,0 +1,74 @@
+body {
+  font-family: 'Baskerville', Georgia, Times, serif;
+  font-size: 32px;
+  line-height: 48px;
+  padding: 15px;
+
+}
+header, footer, section, article {
+	display: block;
+}
+#content {
+}
+#by {
+		font-style: italic;
+margin-right: 5px;
+	font-size: 28px;
+}
+#caption {
+	position: absolute;
+	font-size: 24px;
+	margin: -135px 0 0 70px;
+}
+#path {
+	color: #b53131;
+}
+#io {
+	color: black;
+}
+.date {
+  font-style: italic;
+  margin-left: 15px;
+}
+a {
+  color: #b83000;
+}
+body > header > h1 {
+	border-left: 30px solid black;
+	padding-left: 30px;
+  font-size: 201px;
+  margin: 100px 0 15px 0;
+  font-weight: normal;
+}
+.post header {
+	margin-bottom: 10px;
+}
+.post .body p:first-child {
+	margin-top: 0;
+}
+.post .body p:last-child {
+	margin-bottom: 0;
+}
+.post {
+	margin-bottom: 60px;
+}
+body > header {
+	display: block;
+	padding-top: 30px;
+	line-height: 180px;
+	margin-bottom: 20px;
+}
+h1, h2, h3, h4 {
+  display: inline;
+  margin: 0;
+  font-weight: 600;
+}
+code {
+  font-family: 'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono;
+}
+pre {
+  padding: 20px;
+}
+blockquote {
+  font-style: italic;
+}

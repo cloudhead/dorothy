@@ -3,7 +3,18 @@
     <h1><%= title %></h1>
     <span><%= date %></span>
   </header>
+
   <section class="content">
-    <%= content %>
+    <%= body %>
+  </section>
+
+  <section class="comments">
+    <% if Site[:disqus] %>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript" src="http://disqus.com/forums/<%= Site[:disqus] %>/embed.js"> </script>
+      <noscript><a href="http://<%= Site[:disqus] %>.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    <% end %>
   </section>
 </article>
+
