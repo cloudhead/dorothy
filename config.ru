@@ -1,4 +1,3 @@
-$:.unshift "../toto/lib"
 require 'toto'
 
 # Rack config
