@@ -1,12 +1,8 @@
-require '../toto/lib/toto'
+require 'toto'
 
 @config = Toto::Config::Defaults
 
-task :default => :init
-
-task :init do
-
-end
+task :default => :new
 
 task :new do
   article = {'title' => nil, 'date' => Time.now.strftime("%d/%m/%Y"), 'author' => @config[:author]}.to_yaml
