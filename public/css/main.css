@@ -1,8 +1,11 @@
+html { margin: 20px }
 body {
+  margin: 0 auto;
   font-family: 'Baskerville', Georgia, Times, serif;
-  font-size: 32px;
-  line-height: 48px;
+  font-size: 20px;
+  line-height: 30px;
   padding: 15px;
+  width: 720px;
 
 }
 header, footer, section, article {
@@ -11,8 +14,8 @@ header, footer, section, article {
 #content {
 }
 #by {
-		font-style: italic;
-margin-right: 5px;
+	font-style: italic;
+  margin-right: 5px;
 	font-size: 28px;
 }
 #caption {
@@ -23,12 +26,9 @@ margin-right: 5px;
 #path {
 	color: #b53131;
 }
-#io {
-	color: black;
-}
 .date {
   font-style: italic;
-  margin-left: 15px;
+  margin-left: 5px;
 }
 a {
   color: #b83000;
@@ -50,7 +50,13 @@ body > header > h1 {
 	margin-bottom: 0;
 }
 .post {
-	margin-bottom: 60px;
+	margin-bottom: 30px;
+}
+.post:last-child {
+  margin-bottom: 10px;
+}
+.post p {
+  margin: 10px 0;
 }
 body > header {
 	display: block;
@@ -71,4 +77,11 @@ pre {
 }
 blockquote {
   font-style: italic;
+}
+
+body > footer {
+  text-align: right;
+	font-style: italic;
+  font-size: 18px;
+  color: #888;
 }
