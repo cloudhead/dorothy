@@ -28,10 +28,19 @@ header, footer, section, article {
 }
 .date {
   font-style: italic;
-  margin-left: 5px;
+  float: right;
+  line-height: 43px;
+  margin-right: 30px;
 }
 a {
   color: #b83000;
+}
+h1 a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 body > header > h1 {
 	border-left: 30px solid black;
@@ -58,6 +67,16 @@ body > header > h1 {
 .post p {
   margin: 10px 0;
 }
+.post .more {
+  margin-top: -10px;
+  margin-right: 30px;
+  font-style: italic;
+  text-align: right;
+}
+.more a {
+  text-decoration: none;
+}
+.more a:hover { text-decoration: underline }
 body > header {
 	display: block;
 	padding-top: 30px;
@@ -68,6 +87,9 @@ h1, h2, h3, h4 {
   display: inline;
   margin: 0;
   font-weight: 600;
+}
+ul, li {
+  list-style-type: none;
 }
 code {
   font-family: 'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono;
@@ -80,7 +102,8 @@ blockquote {
 }
 
 body > footer {
-  text-align: right;
+  text-align: left;
+  margin-left: 10px;
 	font-style: italic;
   font-size: 18px;
   color: #888;

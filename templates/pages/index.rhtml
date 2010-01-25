@@ -1,6 +1,16 @@
 <section id="articles">
   <% for article in articles[0...3] %>
-    <%= article %>
+    <article class="post">
+      <header>
+        <h1><a href="<%= article.url %>"><%= article.title %></a></h1>
+        <span class="date"><%= article.date %></span>
+      </header>
+
+      <section class="content">
+        <%= article.summary %>
+      </section>
+      <div class="more"><a href="<%= article.url %>">read on &raquo;</a></div>
+    </article>
   <% end %>
 </section>
 

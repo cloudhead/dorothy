@@ -1,13 +1,13 @@
+<h1><%= @path %></h1>
 <ul>
-  <% for entry in archives %>
-    <li>
-      <header>
-        <%= entry.title %>
-      </header>
-      <span class="date">
-        <%= entry.date %>
-      </span>
-    </li>
+  <% if archives.length > 0 %>
+    <% for entry in archives %>
+      <li>
+        <a href="<%= entry.url %>"><%= entry.title %></a>
+      </li>
+    <% end %>
+  <% else %>
+    There are no articles for this date.
   <% end %>
 </ul>
 
