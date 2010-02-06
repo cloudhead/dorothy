@@ -2,15 +2,18 @@ require 'toto'
 
 @config = Toto::Config::Defaults
 
-task :default => :new
-
-desc "Create a new article from the template."
-task :new do
-  article = {'title' => nil, 'date' => Time.now.strftime("%d/%m/%Y"), 'author' => @config[:author]}.to_yaml
+desc "Run 'rake new[\"My Article Title\"]' to create a new article."
+task :new, [:title] do |t, args|
+  if args.title.nil?
+    toto "Please provide an article title with 'rake new[\"My Article Title\"]'"
+    exit
+  end
+  title = args.title.strip.downcase.gsub(/ /, '-')
+  article = {'title' => title, 'date' => Time.now.strftime("%d/%m/%Y"), 'author' => @config[:author]}.to_yaml
   article << "\n"
   article << "Once upon a time...\n\n"
 
-  path = "#{Toto::Paths[:articles]}/#{Time.now.strftime("%Y-%m-%d")}.#{@config[:ext]}"
+  path = "#{Toto::Paths[:articles]}/#{Time.now.strftime("%Y-%m-%d")}-#{title}.#{@config[:ext]}"
 
   unless File.exist? path
     File.open(path, "w") do |file|
