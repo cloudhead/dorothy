@@ -4,6 +4,7 @@ require 'toto'
 
 task :default => :new
 
+desc "Create a new article from the template."
 task :new do
   article = {'title' => nil, 'date' => Time.now.strftime("%d/%m/%Y"), 'author' => @config[:author]}.to_yaml
   article << "\n"
@@ -21,6 +22,7 @@ task :new do
   end
 end
 
+desc "Publish my blog."
 task :publish do
   toto "publishing your article(s)..."
   `git push origin master`
