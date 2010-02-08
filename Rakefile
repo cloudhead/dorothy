@@ -9,7 +9,7 @@ task :new do
   title = ask('Title: ')
   slug = title.empty?? nil : title.strip.slugize
 
-  article = {'title' => title, 'date' => Time.now.strftime("%d/%m/%Y"), 'author' => @config[:author]}.to_yaml
+  article = {'title' => title, 'date' => Time.now.strftime("%d/%m/%Y")}.to_yaml
   article << "\n"
   article << "Once upon a time...\n\n"
 
@@ -27,7 +27,7 @@ end
 
 desc "Publish my blog."
 task :publish do
-  toto "Publishing your article(s)..."
+  toto "publishing your article(s)..."
   `git push heroku master`
 end
 
