@@ -4,12 +4,16 @@ require 'toto'
 
 task :default => :new
 
+desc "Create a new article."
 task :new do
-  article = {'title' => nil, 'date' => Time.now.strftime("%d/%m/%Y"), 'author' => @config[:author]}.to_yaml
+  title = ask('Title: ')
+  slug = title.empty?? nil : title.strip.slugize
+
+  article = {'title' => title, 'date' => Time.now.strftime("%d/%m/%Y")}.to_yaml
   article << "\n"
   article << "Once upon a time...\n\n"
 
-  path = "#{Toto::Paths[:articles]}/#{Time.now.strftime("%Y-%m-%d")}.#{@config[:ext]}"
+  path = "#{Toto::Paths[:articles]}/#{Time.now.strftime("%Y-%m-%d")}#{'-' + slug if slug}.#{@config[:ext]}"
 
   unless File.exist? path
     File.open(path, "w") do |file|
@@ -21,12 +25,18 @@ task :new do
   end
 end
 
+desc "Publish my blog."
 task :publish do
   toto "publishing your article(s)..."
-  `git push origin master`
+  `git push heroku master`
 end
 
 def toto msg
   puts "\n  toto ~ #{msg}\n\n"
+end
+
+def ask message
+  print message
+  STDIN.gets.chomp
 end
 
