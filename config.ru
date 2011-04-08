@@ -1,3 +1,5 @@
+require 'bundler' 
+Bundler.setup
 
 require 'toto'
 
