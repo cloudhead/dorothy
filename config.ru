@@ -1,4 +1,3 @@
-
 require 'toto'
 
 # Rack config
@@ -28,6 +27,11 @@ toto = Toto::Server.new do
   # set :cache,      28800                                    # cache duration, in seconds
 
   set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
+
+   # set the url so that RSS feeds don't link to 127.0.0.1
+   if ENV['RACK_ENV'] == 'production'
+     set :url,       "http://127.0.0.1"
+   end
 end
 
 run toto
