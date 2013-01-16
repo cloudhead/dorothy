@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'bundler'
 Bundler.require
-#require 'toto'
 
 # Rack config
 use Rack::Static, :urls => ['/css', '/js', '/images', '/favicon.ico'], :root => 'public'
@@ -29,6 +28,7 @@ toto = Toto::Server.new do
   # set :ext,       'txt'                                     # file extension for articles
   # set :cache,      28800                                    # cache duration, in seconds
 
+  set :title, "Kristoffers Reflections" 
   set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
 end
 
