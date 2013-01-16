@@ -3,9 +3,8 @@ author: Kristoffer Roupe
 date: 2013-01-16
 
 I recently watched [Super Size Me](http://www.imdb.com/title/tt0390521/) and 
-was stunned by the doctors statements at the end of the "experiment". 
-First of all, they didn't forsee the implications of the "McDiet", second; 
-they called it a *"high fat"* diet!
+was stunned by the doctors statements at the end of the "experiment". They called
+it a **"high fat"** diet!
 
 Now, don't get me wrong. During the 30 days of _McDieting_ Morgan ate 
 approximetly 12 lbs of fat. That's 0.4 lbs/day (0.18 kg). That's about the
