@@ -1,5 +1,7 @@
-
-require 'toto'
+require 'rubygems'
+require 'bundler'
+Bundler.require
+#require 'toto'
 
 # Rack config
 use Rack::Static, :urls => ['/css', '/js', '/images', '/favicon.ico'], :root => 'public'
