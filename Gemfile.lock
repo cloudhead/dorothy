@@ -1,0 +1,18 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    builder (3.1.4)
+    rack (1.4.4)
+    rdiscount (1.6.8)
+    toto (0.4.9)
+      builder
+      rack
+      rdiscount
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  builder
+  rdiscount
+  toto
